@@ -15,6 +15,8 @@ const conColor = {
   reverse : "\x1b[7m"
 };
 
+// ej approved
+
 const conLine = {
   fullLine : ' '.repeat(process.stdout.columns),
   halfLine : ' '.repeat((process.stdout.columns) / 2),
