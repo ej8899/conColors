@@ -21,11 +21,6 @@ const conColor = {
 };
 //----------------------------------------------------------
 
-<<<<<<< HEAD
-=======
-// ej approved fdsfdffdfdfdfd
-// jr approved
->>>>>>> 1e18e9a0af1d8afd4a511de3c58d9d0fa65f468f
 
 //----------------------------------------------------------
 // Global Variable Console line
