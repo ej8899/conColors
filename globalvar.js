@@ -16,6 +16,7 @@ const conColor = {
 };
 
 // ej approved
+// jr approved
 
 const conLine = {
   fullLine : ' '.repeat(process.stdout.columns),
