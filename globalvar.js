@@ -1,5 +1,10 @@
 //----------------------------------------------------------
-//Global Variable Color List
+// ASCII art
+// https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+//----------------------------------------------------------
+
+//----------------------------------------------------------
+// Global Variable Color List
 const conColor = {
   cyan : "\x1b[36m",
   red : '\x1b[31m',
@@ -14,10 +19,11 @@ const conColor = {
   italics : "\x1b[3m",
   reverse : "\x1b[7m"
 };
+//----------------------------------------------------------
 
-// ej approved
-// jr approved
 
+//----------------------------------------------------------
+// Global Variable Console line
 const conLine = {
   fullLine : ' '.repeat(process.stdout.columns),
   halfLine : ' '.repeat((process.stdout.columns) / 2),
@@ -50,14 +56,17 @@ const conLine = {
 };
 // -------------------------------------------
 
-console.log(conLine.centeredFullLine("Hello How Are You Today"));
-console.log(conLine.centeredHalfLine("Hello How Are You Today", conColor.red));
-console.log(conLine.centeredFullLineDash("Hello How Are You Today", conColor.green, conColor.cyan));
-console.log(conLine.centeredHalfLineDash("Hello How Are You Today", conColor.red, conColor.cyan));
-console.log(conLine.halfLine);
-console.log(conLine.fullLine);
-console.log(conLine.halfLineDash(conColor.orange));
-console.log(conLine.fullLineDash(conColor.yellow));
+//----------------------------------------------------------
+// Example Test Case
+// console.log(conLine.centeredFullLine("Hello How Are You Today"));
+// console.log(conLine.centeredHalfLine("Hello How Are You Today", conColor.red));
+// console.log(conLine.centeredFullLineDash("Hello How Are You Today", conColor.green, conColor.cyan));
+// console.log(conLine.centeredHalfLineDash("Hello How Are You Today", conColor.red, conColor.cyan));
+// console.log(conLine.halfLine);
+// console.log(conLine.fullLine);
+// console.log(conLine.halfLineDash(conColor.orange));
+// console.log(conLine.fullLineDash(conColor.yellow));
+//----------------------------------------------------------
 
 
 module.exports = {conColor, conLine};
