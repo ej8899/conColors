@@ -14,8 +14,8 @@ const conColor = {
   magenta : `\x1b[95m`,
   orange : "\u001b[38;5;208m",
   yellow : '\x1b[93m',
-  bright : "\x1b[1m", 
-  dim : "\x1b[2m", 
+  bright : "\x1b[1m",
+  dim : "\x1b[2m",
   italics : "\x1b[3m",
   reverse : "\x1b[7m"
 };
@@ -46,12 +46,12 @@ const conLine = {
   centeredHalfLineDash : (message, linecolor, textcolor) => {
     linecolor = !linecolor ? conColor.reset : linecolor;
     textcolor = !textcolor ? linecolor : textcolor;
-    return `${linecolor}${'-'.repeat((process.stdout.columns / 2 - message.length) / 2)}${textcolor}${message}${conColor.reset}${linecolor}${'-'.repeat((process.stdout.columns / 2 - message.length) / 2)}${conColor.reset}`
+    return `${linecolor}${'-'.repeat((process.stdout.columns / 2 - message.length) / 2)}${textcolor}${message}${conColor.reset}${linecolor}${'-'.repeat((process.stdout.columns / 2 - message.length) / 2)}${conColor.reset}`;
   },
   centeredFullLineDash : (message, linecolor, textcolor) => {
     linecolor = !linecolor ? conColor.reset : linecolor;
     textcolor = !textcolor ? linecolor : textcolor;
-    return `${linecolor}${'-'.repeat(process.stdout.columns / 2 - message.length)}${textcolor}${message}${conColor.reset}${linecolor}${'-'.repeat(process.stdout.columns / 2 - message.length)}${conColor.reset}`
+    return `${linecolor}${'-'.repeat(process.stdout.columns / 2 - message.length)}${textcolor}${message}${conColor.reset}${linecolor}${'-'.repeat(process.stdout.columns / 2 - message.length)}${conColor.reset}`;
   },
 };
 // -------------------------------------------
