@@ -1,6 +1,6 @@
 //
 // myDateObject - date object to provide quick access to formatted date and times
-//
+// v1.0 2022-08-08
 
 const myDateObject = {
   dateObject: new Date(),
