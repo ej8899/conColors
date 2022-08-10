@@ -26,6 +26,7 @@ const conColor = {
 // Global Variable Console line
 const conLine = {
   fullLine : ' '.repeat(process.stdout.columns),
+  threeQuartLine : ' '.repeat((process.stdout.columns) * 3 / 4),
   halfLine : ' '.repeat((process.stdout.columns) / 2),
   fullLineDash : (linecolor) => {
     linecolor = !linecolor ? conColor.reset : linecolor;
@@ -35,23 +36,36 @@ const conLine = {
     linecolor = !linecolor ? conColor.reset : linecolor;
     return `${linecolor}${'-'.repeat(process.stdout.columns / 2)}${conColor.reset}`;
   },
+  threeQuartLineDash : (linecolor) => {
+    linecolor = !linecolor ? conColor.reset : linecolor;
+    return `${linecolor}${'-'.repeat(process.stdout.columns * 3 / 4)}${conColor.reset}`;
+  },
   centeredHalfLine : (message, textcolor) => {
     textcolor = !textcolor ? conColor.reset : textcolor;
     return `${textcolor}${' '.repeat((process.stdout.columns / 2 - message.length) / 2)}${message}${conColor.reset}`;
   },
+  centeredThreeQuartLine : (message, textcolor) => {
+    textcolor = !textcolor ? conColor.reset : textcolor;
+    return `${textcolor}${' '.repeat((process.stdout.columns * 3 / 4 - message.length) / 2)}${message}${conColor.reset}`;
+  },
   centeredFullLine : (message, textcolor) => {
     textcolor = !textcolor ? conColor.reset : textcolor;
-    return `${textcolor}${' '.repeat((process.stdout.columns / 2 - message.length))}${message}${conColor.reset}`;
+    return `${textcolor}${' '.repeat((process.stdout.columns - message.length) / 2)}${message}${conColor.reset}`;
   },
   centeredHalfLineDash : (message, linecolor, textcolor) => {
     linecolor = !linecolor ? conColor.reset : linecolor;
     textcolor = !textcolor ? linecolor : textcolor;
     return `${linecolor}${'-'.repeat((process.stdout.columns / 2 - message.length) / 2)}${textcolor}${message}${conColor.reset}${linecolor}${'-'.repeat((process.stdout.columns / 2 - message.length) / 2)}${conColor.reset}`;
   },
+  centeredThreeQuartLineDash : (message, linecolor, textcolor) => {
+    linecolor = !linecolor ? conColor.reset : linecolor;
+    textcolor = !textcolor ? linecolor : textcolor;
+    return `${linecolor}${'-'.repeat((process.stdout.columns * 3 / 4 - message.length) / 2)}${textcolor}${message}${conColor.reset}${linecolor}${'-'.repeat((process.stdout.columns * 3 / 4 - message.length) / 2)}${conColor.reset}`;
+  },
   centeredFullLineDash : (message, linecolor, textcolor) => {
     linecolor = !linecolor ? conColor.reset : linecolor;
     textcolor = !textcolor ? linecolor : textcolor;
-    return `${linecolor}${'-'.repeat(process.stdout.columns / 2 - message.length)}${textcolor}${message}${conColor.reset}${linecolor}${'-'.repeat(process.stdout.columns / 2 - message.length)}${conColor.reset}`;
+    return `${linecolor}${'-'.repeat((process.stdout.columns - message.length) / 2)}${textcolor}${message}${conColor.reset}${linecolor}${'-'.repeat((process.stdout.columns - message.length) / 2)}${conColor.reset}`;
   },
 };
 // -------------------------------------------
