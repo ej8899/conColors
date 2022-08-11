@@ -9,15 +9,20 @@ const conColor = {
   cyan : "\x1b[36m",
   red : '\x1b[31m',
   green : '\x1b[92m',
+  green1 : '\x1b[32m',
   grey : '\x1b[90m',
   reset : "\x1b[0m",
   magenta : `\x1b[95m`,
   orange : "\u001b[38;5;208m",
   yellow : '\x1b[93m',
+  blue : '\x1b[34m',
+  black : '\x1b[30m',
+  purple : '\x1b[35m',
+  brown : '\x1b[33m',
   bright : "\x1b[1m",
   dim : "\x1b[2m",
   italics : "\x1b[3m",
-  reverse : "\x1b[7m"
+  reverse : "\x1b[7m",
 };
 //----------------------------------------------------------
 
