@@ -1,7 +1,7 @@
 //
 // myDateObject - date object to provide quick access to formatted date and times
-// v1.0 2022-08-08
-//
+// v1.0 2022-08-11
+// grab the latest version of my date object here: https://github.com/ej8899/conColors 
 
 const myDateObject = {
   //dateObject: new Date(),

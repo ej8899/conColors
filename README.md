@@ -5,7 +5,8 @@ console (terminal) colors and styles - along with a few other simple helper func
 ## conColors.js  
  - original colors list, lines and some functions for lines and character padding.
 
-## dateobject.js  
+## dateobject.js
+ - 2022-08-11 - restructured & released as live
  - ```myDateObject.various()``` - manipulate dates
 
  ## getOpSys.js  
