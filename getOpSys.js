@@ -11,6 +11,5 @@ const getOpSys = function() {
   } else if (opsys === "linux") {
     opsys = "Linux";
   }
-  opsys = conColorBright + conColorOrange + opsys + conColorReset;
   return opsys;
 };

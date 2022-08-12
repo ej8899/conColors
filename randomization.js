@@ -13,3 +13,15 @@ const makeID = function(numChars) {
   }
   return yourCode;
 };
+
+// EXAMPLE
+console.log(makeID(10));
+
+//
+// randomNumer(5,98);
+// return a random number between min and max supplied values
+//
+const randomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
+// EXAMPLE
+console.log(randomNumber(5,575));

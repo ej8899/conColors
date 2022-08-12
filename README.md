@@ -6,10 +6,16 @@ console (terminal) colors and styles - along with a few other simple helper func
  - original colors list, lines and some functions for lines and character padding.
 
 ## dateobject.js  
- - manipulate dates
+ - ```myDateObject.various()``` - manipulate dates
 
  ## getOpSys.js  
- - return operating system
+ - ```getOpSys()``` - return operating system
 
  ## globalvar.js
-  - colors as an object and more line/helper functions
+  - ```conColor.various``` - colors list in object
+  - ```conLine.various()``` - dashed lines w various options
+
+
+## randomization.js  
+ - ```randomNumber(min,max)``` - return random # between min & max
+ - ```makeID(numChars)``` - return a randomized ID code w alpha numeric
