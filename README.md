@@ -1,6 +1,6 @@
 # conColors Library
-console (terminal) colors and styles - along with a few other simple helper functions
-
+Miscellaneous helper functions, objects and code snippets.
+Originally a terminal/console color library.
 
 ## conColors.js  
  - original colors list, lines and some functions for lines and character padding.

@@ -1,24 +1,17 @@
 //
 // myDateObject - date object to provide quick access to formatted date and times
 // v1.0 2022-08-11
-// grab the latest version of my date object here: https://github.com/ej8899/conColors 
-
+// grab the latest version of myDateObject here: https://github.com/ej8899/conColors
+//
 const myDateObject = {
-  //dateObject: new Date(),
-
   // return "right now" if nothing supplied, otherwise return object of supplied date info
-  dateObject(aDate) {
-    if (!aDate) {
-      return new Date();
-    } else {
-      return new Date(aDate);
-    }
-  },
+  dateObject(aDate) { return (aDate ? new Date(aDate) : new Date()); },
 
   // padding of single digits to double digits
-  datePad(i) {
-    return (`0${i}`).slice(-2);
-  },
+  datePad(i) { return (`0${i}`).slice(-2); },
+  // check & set date & tim dividers: (not used as of yet)
+  checkDateDiv(div) { if (!div) { return '-'; } else { return div; }},
+  checkTimeDiv(div) { if (!div) { return ':'; } else { return div; }},
 
   // date functions
   date(aDate) { return (this.datePad(this.dateObject(aDate).getDate())); },
@@ -34,15 +27,16 @@ const myDateObject = {
   milliseconds(aDate) { return (this.dateObject(aDate).getTime()); },
 
   // combinations
-  dateFull(divider, aDate) { if (!divider) { divider = ':'; } return (this.justDate(aDate) + ' ' + this.justHHMM(aDate)); },
-  justAMPM(divider, aDate) {
-    if (!divider) { divider = ':'; } let h = '', s = '';
-    this.hours(aDate) > 13 ? (h = this.hours(aDate) - 12, s = 'pm') : (h = this.hours(aDate), s = 'am'); 
-    return (`${h}${divider}${this.minutes(aDate)}${s}`);
+  dateFull(d, aDate) { return (this.justDate(aDate) + ' ' + this.justHHMM(aDate)); },
+  justAMPM(d, aDate) {
+    if (!d) { d = ':'}
+    let h = '', s = '';
+    this.hours(aDate) > 13 ? (h = this.hours(aDate) - 12, s = 'pm') : (h = this.hours(aDate), s = 'am');
+    return (`${h}${d}${this.minutes(aDate)}${s}`);
   },
-  justHHMM(divider, aDate) { if (!divider) { divider = ':'; } return (`${this.hours(aDate)}${divider}${this.minutes(aDate)}`); },
-  justDate(divider, aDate) { if (!divider) { divider = '-'; } return (`${this.year(aDate)}${divider}${this.month(aDate)}${divider}${this.date(aDate)}`); },
-  justTime(divider, aDate) { if (!divider) { divider = ':'; } return (`${this.hours(aDate)}${divider}${this.minutes(aDate)}${divider}${this.seconds(aDate)}`); },
+  justHHMM(d, aDate) { if (!d) { d = ':'; } return (`${this.hours(aDate)}${d}${this.minutes(aDate)}`); },
+  justDate(d, aDate) { if (!d) { d = '-'; } return (`${this.year(aDate)}${d}${this.month(aDate)}${d}${this.date(aDate)}`); },
+  justTime(d, aDate) { if (!d) { d = ':'; } return (`${this.hours(aDate)}${d}${this.minutes(aDate)}${d}${this.seconds(aDate)}`); },
   fullEnglishDate(aDate) { return (`${this.weekday(aDate)}, ${this.monthEnglish(aDate)} ${this.date(aDate)}, ${this.year(aDate)}`) },
 };
 
