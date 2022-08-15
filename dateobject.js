@@ -3,6 +3,9 @@
 // v1.0 2022-08-11
 // grab the latest version of myDateObject here: https://github.com/ej8899/conColors
 //
+
+// also see this for ideas, or inclusion instead of ours?  https://momentjs.com/ 
+
 const myDateObject = {
   // return "right now" if nothing supplied, otherwise return object of supplied date info
   dateObject(aDate) { return (aDate ? new Date(aDate) : new Date()); },
