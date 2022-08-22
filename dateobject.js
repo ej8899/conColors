@@ -5,6 +5,7 @@
 //
 
 // also see this for ideas, or inclusion instead of ours?  https://momentjs.com/ 
+// also see this for more ideas: timeago - https://timeago.yarp.com/
 
 const myDateObject = {
   // return "right now" if nothing supplied, otherwise return object of supplied date info
