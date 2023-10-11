@@ -1,1 +1,25 @@
-.DS_Store/
+#
+# .gitignore
+# this file, and other useful snippets of code are available at
+# http://www.github.com/ej8899/conColors/
+#
+
+# macOS files:
+.DS_Store
+
+# environment variable & secrets
+.env
+
+# misc files
+*.bak
+*.log
+
+# misc directories
+node_modules/
+logs/
+
+
+
+
+# removing something already checked in via git?
+# git rm --cached FILENAME
