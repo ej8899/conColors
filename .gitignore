@@ -6,6 +6,7 @@
 
 # macOS files:
 .DS_Store
+.DS_*
 
 # environment variable & secrets
 .env
